@@ -18,11 +18,14 @@ public class PlayerAvater : NetworkBehaviour
 
     public override void FixedUpdateNetwork()
     {
+        var cameraRotation = Quaternion.Euler(0f,
+                                              Camera.main.transform.rotation.eulerAngles.y,
+                                              0f);
         var inputDirection = new Vector3(Input.GetAxis("Horizontal"),
                                          0f,
                                          Input.GetAxis("Vertical"));
 
-        characterController.Move(inputDirection);
+        characterController.Move(cameraRotation * inputDirection);
 
         if (Input.GetKey(KeyCode.Space))
         {
