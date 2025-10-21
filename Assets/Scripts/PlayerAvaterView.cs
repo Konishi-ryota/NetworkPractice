@@ -1,16 +1,14 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class PlayerAvaterView : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private CinemachineCamera cinemachineCamera;
 
-    // Update is called once per frame
-    void Update()
+    public void MakeCameraTarget()
     {
-        
+        // CinemachineCamera‚Ì—Dæ“x‚ğã‚°‚ÄAƒJƒƒ‰‚Ì’Ç]‘ÎÛ‚É‚·‚é
+        cinemachineCamera.Priority.Value = 100;
     }
 }
