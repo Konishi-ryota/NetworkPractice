@@ -9,6 +9,11 @@ public class PlayerAvater : NetworkBehaviour
     {
         characterController = GetComponent<NetworkCharacterController>();
         var view = GetComponent<PlayerAvaterView>();
+        // 自身がアバターの権限を持っているなら、カメラの追従対象にする
+        if (HasStateAuthority)
+        {
+            view.MakeCameraTarget();
+        }
     }
 
     public override void FixedUpdateNetwork()
