@@ -17,5 +17,10 @@ public class PlayerAvater : NetworkBehaviour
                                          Input.GetAxis("Vertical"));
 
         characterController.Move(inputDirection);
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            characterController.Jump();
+        }
     }
 }
