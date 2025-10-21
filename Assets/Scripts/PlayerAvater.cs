@@ -8,6 +8,7 @@ public class PlayerAvater : NetworkBehaviour
     public override void Spawned()
     {
         characterController = GetComponent<NetworkCharacterController>();
+        var view = GetComponent<PlayerAvaterView>();
     }
 
     public override void FixedUpdateNetwork()
