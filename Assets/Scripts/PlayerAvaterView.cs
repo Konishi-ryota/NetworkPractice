@@ -18,4 +18,9 @@ public class PlayerAvaterView : MonoBehaviour
     {
         nameLabel.text = nickName;
     }
+    private void LateUpdate()
+    {
+        // プレイヤー名のテキストを、ビルボード（常にカメラ正面向き）にする
+        nameLabel.transform.rotation = Camera.main.transform.rotation;
+    }
 }
