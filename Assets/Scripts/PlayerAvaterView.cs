@@ -1,5 +1,6 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using TMPro;
 
 public class PlayerAvaterView : MonoBehaviour
 {
