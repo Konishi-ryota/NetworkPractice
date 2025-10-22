@@ -40,7 +40,10 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks
             var rand = UnityEngine.Random.insideUnitCircle * 5;
             var spawnPosition = new Vector3(rand.x, 2f, rand.y);
 
-            runner.Spawn(playerAvatarPrefab, spawnPosition, Quaternion.identity);
+            runner.Spawn(playerAvatarPrefab, spawnPosition, Quaternion.identity, onBeforeSpawned : (_, networkObject) =>
+            {
+                networkObject.GetComponent<PlayerAvater>().NickName = $"Player{UnityEngine.Random.Range(0, 10000)}";
+            });
         }
     }
 
