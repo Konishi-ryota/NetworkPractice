@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4232510778711598350}
   - component: {fileID: -3179146960296574021}
   - component: {fileID: 8026975433423019664}
+  - component: {fileID: 1283937420047658273}
   - component: {fileID: 4500878350167181955}
   - component: {fileID: 8004239791162541575}
   - component: {fileID: 367259290308473938}
@@ -91,6 +92,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b59f7b6abd3b74cab629390431e9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAvater
+  _NickName:
+    _length: 0
+    _data:
+      Data: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!114 &1283937420047658273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829127770708627694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5e6936157eddc469421401ff21d774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAvaterView
+  cinemachineCamera: {fileID: 8930793259171980128}
+  nameLabel: {fileID: 136153734973727053}
 --- !u!33 &4500878350167181955
 MeshFilter:
   m_ObjectHideFlags: 0
