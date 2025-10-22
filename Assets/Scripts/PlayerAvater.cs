@@ -5,6 +5,8 @@ public class PlayerAvater : NetworkBehaviour
 {
     private NetworkCharacterController characterController;
 
+    [Networked]
+    public NetworkString<_16> NickName { get; set; }
     public override void Spawned()
     {
         characterController = GetComponent<NetworkCharacterController>();
