@@ -14,4 +14,8 @@ public class PlayerAvaterView : MonoBehaviour
         // CinemachineCamera‚Ì—Dæ“x‚ğã‚°‚ÄAƒJƒƒ‰‚Ì’Ç]‘ÎÛ‚É‚·‚é
         cinemachineCamera.Priority.Value = 100;
     }
+    public void SetNickName(string nickName)
+    {
+        nameLabel.text = nickName;
+    }
 }
