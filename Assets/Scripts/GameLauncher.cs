@@ -1,8 +1,9 @@
+using Fusion;
+using Fusion.Photon.Realtime;
+using Fusion.Sockets;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Fusion.Sockets;
-using Fusion;
 public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks
 {
     [SerializeField]
@@ -19,6 +20,17 @@ public class GameLauncher : MonoBehaviour, INetworkRunnerCallbacks
         var result = await networkRunner.StartGame(new StartGameArgs
         {
             GameMode = GameMode.Shared,
+            SessionName = "MyRoom",
+            SessionProperties = new Dictionary<string, SessionProperty> {
+                {"Gametype",1 },
+                { "MapName", "de_dust2" },
+                { "IsHardcore", true }
+            },
+            EnableClientSessionCreation = true,
+            PlayerCount = 10,
+            IsOpen = true,
+            IsVisible = true,
+            MatchmakingMode = MatchmakingMode.FillRoom
         });
         Debug.Log(result);
     }
